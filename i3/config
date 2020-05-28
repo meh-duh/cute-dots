@@ -41,8 +41,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # my adjust brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 3 
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 3 
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -177,7 +177,7 @@ bindsym Mod1+r mode "resize"
 #startup commands
 ####################################
 
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/art/dark-valley.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/art/dead_end.jpg
 exec --no-startup-id ~/.config/polybar/launch.sh 
 exec --no-startup-id compton
 
@@ -217,9 +217,12 @@ assign [class="Chromium"] → $ws1
 assign [class="dolphin"] → $ws2 
 assign [class="URxvt"] → $ws3
 assign [class="Zathura"] → $ws4 
-assign [class="libreoffice"] → $ws5 
-assign [class="vlc"] → $ws10
+assign [class="libreoffice"] → $ws5
+assign [class="code-oss"] → $ws6 
+assign [class="Gimp"] → $ws8
 assign [class="ktorrent"] → $ws9
 
-for_window [class="Chromium|dolphin|URxvt|Zathura|libreoffice|ktorrent"] focus
+assign [class="Viewnior"] → $ws10
+assign [class="vlc"] → $ws10
+for_window [class="Chromium|dolphin|URxvt|Zathura|libreoffice|code-oss|Gimp|ktorrent|Viewnior"] focus
 

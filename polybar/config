@@ -1,6 +1,6 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #0a0a0a
+background = #30000000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -22,14 +22,13 @@ height = 27
 
 
 ;foreground = ${colors.foreground}
-
+background = ${colors.background}
 ;line-size = 3
 ;line-color = #f00
 
 
 padding-left = 0
 padding-right = 0
-
 module-margin-left = 1
 module-margin-right = 2
 
@@ -40,8 +39,6 @@ font-2 = Material Icons;0
 ;font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-;modules-center = mpd
-;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-right = wireless-network battery-combined cpu date
 
 tray-position = right
@@ -81,7 +78,7 @@ time = %I:%M
 time-alt = %Y-%m-%d
 
 format = <label>
-format-background = #1fccac
+;format-background = #1fccac
 format-foreground = #bb00fa
 format-prefix = 
 label = %time%
@@ -97,7 +94,7 @@ interval = 2
 format = <label> 
 
 label = CPU %percentage%%
-format-background = #f70036
+;format-background = #f70036
 format-foreground = #1eff00
 format-prefix = 
 
@@ -109,8 +106,8 @@ format-prefix = 
 type = custom/script
 exec = ~/.config/polybar/battery-combined-udev.sh
 tail = true
-format-prefix = 😃
-format-suffix = 
+;format-prefix = 😃
+;format-suffix = 
 
 
 [module/i3]
@@ -119,16 +116,28 @@ format = <label-state>
 index-sort = true
 wrapping-scroll = false
 
-label-focused = %index%
+label-focused = %icon%
 label-focused-background = #9900ff
 label-focused-padding = 4
 
-label-unfocused = %index%
+label-unfocused = %icon%
 label-unfocused-padding = 4
 
 label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 4 
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;7
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+
 
 
 
@@ -142,7 +151,7 @@ interval = 3.0
 format-connected = <ramp-signal> F <label-connected>
 label-connected = %downspeed:9% %upspeed:9% %signal:4%
 label-connected-foreground = #eefafafa
-format-connected-background = #039dfc
+;format-connected-background = #039dfc
 ramp-signal-0 = 0
 ramp-signal-1 = 1
 ramp-signal-2 = 2
