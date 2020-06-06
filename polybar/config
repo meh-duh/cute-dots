@@ -39,7 +39,7 @@ font-2 = Material Icons;0
 ;font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-right = wireless-network battery-combined cpu date
+modules-right = battery-combined cpu date
 
 tray-position = right
 tray-padding = 2
@@ -105,8 +105,12 @@ format-prefix = 
 [module/battery-combined]
 type = custom/script
 exec = ~/.config/polybar/battery-combined-udev.sh
+
+; Will the script output continous content?
+; Default: false
 tail = true
-;format-prefix = 😃
+
+;format-prefix = fo
 ;format-suffix = 
 
 
@@ -117,7 +121,7 @@ index-sort = true
 wrapping-scroll = false
 
 label-focused = %icon%
-label-focused-background = #9900ff
+label-focused-background = #a0000000
 label-focused-padding = 4
 
 label-unfocused = %icon%

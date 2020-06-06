@@ -177,7 +177,7 @@ bindsym Mod1+r mode "resize"
 #startup commands
 ####################################
 
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/art/dead_end.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/art/simple-desert.png
 exec --no-startup-id ~/.config/polybar/launch.sh 
 exec --no-startup-id compton
 
@@ -215,6 +215,7 @@ mode "$power" {
 
 assign [class="Chromium"] → $ws1 
 assign [class="dolphin"] → $ws2 
+assign [title="ranger"] → $ws2 
 assign [class="URxvt"] → $ws3
 assign [class="Zathura"] → $ws4 
 assign [class="libreoffice"] → $ws5
@@ -222,7 +223,10 @@ assign [class="code-oss"] → $ws6
 assign [class="Gimp"] → $ws8
 assign [class="ktorrent"] → $ws9
 
-assign [class="Viewnior"] → $ws10
-assign [class="vlc"] → $ws10
-for_window [class="Chromium|dolphin|URxvt|Zathura|libreoffice|code-oss|Gimp|ktorrent|Viewnior"] focus
+assign [class="Viewnior|vlc"] → $ws10
+assign [class=".*"] $ws7
+
+#for_window [class="Chromium|dolphin|URxvt|Zathura|libreoffice|code-oss|Gimp|ktorrent|Viewnior"] focus
+for_window [class=".*"] focus
+for_window [title="ranger"] focus
 
