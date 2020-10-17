@@ -8,7 +8,25 @@ foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
+red = #bf616a
+green = #a3be8c
+yellow = #ebcb8b
+orange = #eba68b
+white = #e5e9f0
+magenta = #b48ead
+blue = #81a1c1
+cyan = #88c0d0
+pink = #ea4b8b
 
+; universal color
+bg = #2e3440
+fg = #fff6f6
+fg-alt = #434c5e
+trans = #00000000
+
+; accent color
+accent = #fff6f6
+accent-alt = #ea4b8b
 
 
 
@@ -104,7 +122,9 @@ format-prefix = 
 
 [module/battery-combined]
 type = custom/script
+
 exec = ~/.config/polybar/battery-combined-udev.sh
+
 
 ; Will the script output continous content?
 ; Default: false
@@ -112,7 +132,6 @@ tail = true
 
 ;format-prefix = fo
 ;format-suffix = 
-
 
 [module/i3]
 type = internal/i3
