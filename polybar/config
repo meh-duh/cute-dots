@@ -50,9 +50,11 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Cantarell:style=bold;0
+font-0 = Cantarell:pixelsize=12;:style=bold;0
 font-1 = NotoColorEmoji:scale=7;0
-font-2 = Material Icons;0
+font-2 = Material Icons:style=Solid:pixelsize=15;0
+font-3 = FontAwesome5Free:style=Solid:pixelsize=13
+font-4 = FontAwesome5Brands:style=Solid:pixelsize=13
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
 
@@ -111,12 +113,13 @@ type = internal/cpu
 interval = 2
 format = <label> 
 
-label = CPU %percentage%%
+label = %percentage%%
 ;format-background = #f70036
-format-foreground = #1eff00
-format-prefix = 
-
-
+;format-foreground = #1eff00
+format-prefix =  
+format-prefix-foreground = #1eff00
+format-prefix-padding-right = 1
+format-prefix-padding-top = 1
 
 
 
@@ -150,16 +153,16 @@ label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 4 
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
 ws-icon-6 = 7;7
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
 
 
 
