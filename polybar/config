@@ -8,7 +8,7 @@ foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
-red = #bf616a
+red = #cf000a
 green = #a3be8c
 yellow = #ebcb8b
 orange = #eba68b
@@ -47,8 +47,8 @@ background = ${colors.background}
 
 padding-left = 0
 padding-right = 0
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 4
+module-margin-right = 4
 
 font-0 = Cantarell:pixelsize=12;:style=bold;0
 font-1 = NotoColorEmoji:scale=7;0
@@ -59,7 +59,7 @@ font-4 = FontAwesome5Brands:style=Solid:pixelsize=13
 ;font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-right = battery-combined cpu date
+modules-right = ram cpu battery-combined date
 
 tray-position = right
 tray-padding = 2
@@ -98,28 +98,15 @@ time = %I:%M
 time-alt = %Y-%m-%d
 
 format = <label>
-;format-background = #1fccac
-format-foreground = #bb00fa
-format-prefix = 
 label = %time%
 
+format-prefix = 
+format-prefix-foreground = #3162f5
+format-prefix-padding-right = 3
 
 
 
 
-
-[module/cpu]
-type = internal/cpu
-interval = 2
-format = <label> 
-
-label = %percentage%%
-;format-background = #f70036
-;format-foreground = #1eff00
-format-prefix =  
-format-prefix-foreground = #1eff00
-format-prefix-padding-right = 1
-format-prefix-padding-top = 1
 
 
 
@@ -136,6 +123,38 @@ tail = true
 ;format-prefix = fo
 ;format-suffix = 
 
+
+
+
+
+
+[module/cpu]
+type = internal/cpu
+interval = 3
+format = <label> 
+
+label = %percentage%%
+
+;format-prefix =  
+;format-prefix = 
+format-prefix =  
+format-prefix-foreground = ${colors.red}
+format-prefix-padding-right = 3
+format-prefix-padding-top = 1
+
+
+
+[module/ram]
+type = internal/memory
+interval = 5
+
+format = <label>
+label = %percentage_used%%
+
+format-prefix =    
+format-prefix-foreground = #008707
+format-prefix-padding-right = 3
+
 [module/i3]
 type = internal/i3
 format = <label-state>
@@ -143,7 +162,7 @@ index-sort = true
 wrapping-scroll = false
 
 label-focused = %icon%
-label-focused-background = #a0000000
+label-focused-background = #00000000
 label-focused-padding = 4
 
 label-unfocused = %icon%
