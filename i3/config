@@ -25,7 +25,7 @@ client.background       #ffffff
 
 gaps outer 0 
 gaps inner 2 
-#border_radius 3 
+#border_radius 2 
 
 #eliminate title bar
 default_border none 
@@ -189,7 +189,7 @@ bindsym Mod1+r mode "resize"
 #startup commands
 ####################################
 
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/nature/purple-flower.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/art/lake.jpg
 exec --no-startup-id ~/.config/polybar/launch.sh 
 exec --no-startup-id compton
 
